@@ -114,7 +114,9 @@
 }
 
 .carousel-inner div img {
-  height: 250px;
+  height: 250px; /* Altura para pantallas pequeñas */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
 .section {

@@ -6,3 +6,9 @@ darkModeButton.addEventListener("click", ()=>{
     body.classList.toggle("dark-mode");
 });
 
+// Deslizamiento por links internos
+function navigateSection(event) {
+    event.preventDefault();
+    const target = event.target.getAttribute('href');
+    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+}

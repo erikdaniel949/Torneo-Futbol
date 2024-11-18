@@ -129,7 +129,7 @@
   scroll-margin-top: 50px; /*al hacer scroll mediante los links internos agrega un poco de espacio arriba, sin esto el contenido se tapa por el header fixeado*/
 }
 
-.section h2 {
+.section-title {
   width: 100%;
   color: var(--color-texto);
   padding: 10px 0;

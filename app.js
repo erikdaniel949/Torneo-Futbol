@@ -1,14 +1,23 @@
 const darkModeButton = document.querySelector(".dark-mode-button"); // la lunita basicamente
 const body = document.querySelector(".body");
 
-// Agregar el evento al botón para alternar el tema
+// si cuando abandonaste la web la tenias en modo oscuro lo deja asi al volver a ingresar en otro momento, incluso si cerras el navegador, la pestaña, etc
+if(localStorage.getItem("preferencia-dark-mode") === "true"){
+  body.classList.add("dark-mode") 
+} else {
+  body.classList.remove("dark-mode");
+}
+  
+// agregar el evento al botón(la lunita) para alternar el tema
 darkModeButton.addEventListener("click", ()=>{
-    body.classList.toggle("dark-mode");
+  // alterna la clase dark-mode del body, si la tenia la quita y si no la tenia la agrega
+  body.classList.toggle("dark-mode");
+  
+  // guarda el estado de la preferencia
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("preferencia-dark-mode", "true");
+  } else {
+    localStorage.setItem("preferencia-dark-mode", "false");
+  }
 });
 
-// Deslizamiento por links internos
-function navigateSection(event) {
-    event.preventDefault();
-    const target = event.target.getAttribute('href');
-    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
-}

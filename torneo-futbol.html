@@ -91,6 +91,15 @@
       </div>
     </footer>
     <script src="app.js"></script>
+    <script>
+      function navigateSection(event) {
+        event.preventDefault();
+        const target = event.target.getAttribute('href');
+        document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+        // Reemplaza el estado actual para evitar añadir una entrada en el historial
+        window.history.replaceState(null, null, window.location.href.split('#')[0] + target);
+      }
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

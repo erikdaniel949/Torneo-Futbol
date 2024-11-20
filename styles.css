@@ -125,7 +125,7 @@
   height: auto;
   gap: 5%;
   padding: 20px;
-  margin-bottom; 10px;
+  margin-bottom: 100px;
   scroll-margin-top: 50px; /*al hacer scroll mediante los links internos agrega un poco de espacio arriba, sin esto el contenido se tapa por el header fixeado*/
 }
 
@@ -142,7 +142,8 @@
   flex: 1;
   min-width: 250px;
   border-radius: 15px;
-  padding: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .section-item-title {
@@ -151,12 +152,13 @@
   padding: 10px 0;
   text-align: center;
   font-size: 22px;
-
-.section-item p {
-  padding: 20px;
 }
 
 .section-item-img {
+  padding: 0;
+}
+
+.section-item-img img {
   width: 100%;
   height: 100%;
   border-radius: 15px;
@@ -167,7 +169,7 @@
   background-color: var(--color-secundario); /* Color de fondo del footer */
   padding: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: columns;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
@@ -187,7 +189,7 @@
 }
 
 /* Media Query para pantallas más grandes */
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   main {
     width: 80%;
     display: flex;
@@ -212,9 +214,12 @@
 }
 
 /* Media Query para pantallas más pequeñas */
-@media (max-width: 699px) {
+@media (max-width: 799px) {
   .section {
     flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+  }
+  .footer {
+    margin-top: 30px;
   }
 }
 
@@ -225,7 +230,8 @@
   }
 }
 
+/*innecesario creo, lo dejo por si acaso
 @media (min-width: 580px) {
   .footer {
     margin-top: 80px;
-}
+}*/

@@ -21,3 +21,8 @@ darkModeButton.addEventListener("click", ()=>{
   }
 });
 
+// funcion para que al tocar un link interno no se guarde en el historial, esto hace que si queres volver atras te lleve al index y no te desplace al anterior link que tocast(tipo te mueve entre secciones si tocaste varias)
+const noGuardarEnHistorial = (event)=>{
+  let target = event.target.getAttribute('href');
+  window.history.replaceState(null, null, window.location.href.split('#')[0] + target);
+}

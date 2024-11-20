@@ -223,3 +223,8 @@ footer p {
     min-height: 25vh;
   }
 }
+
+@media (min-width: 580px) {
+  .footer {
+    margin-top: 80px;
+}

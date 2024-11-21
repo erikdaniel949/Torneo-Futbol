@@ -45,63 +45,116 @@
   object-position: center;
 }
 
+/* Header e imagen */
 .header {
-  background-color: var(--color-secundario);
+    position: relative;
+    height: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: brightness(0.5);
+    
+}
+
+/* Estilo para el contenedor del logo debajo del nav */
+
+
+
+/* Navegación */
+.nav-bar {
+   position: fixed; /* Barra fija en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 100; /*el header se sobrepone al carousel*/
-  color: var(--color-texto);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
 }
 
-.svg {
-  color: inherit; /*inherit es que hereda el valor del atributo de su padre, osea de su contenedor*/
-  cursor: pointer;
-  transition: .2s all linear;
+.nav-links {
+    display: flex;
+    gap: 2rem;
 }
 
-.svg:hover {
-  color: var(--color-texto-contrario);
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
-.header nav {
+.nav-links a:hover {
+    background-color: green;
+    color: #fff;
+}
+
+
+
+
+.container-mdo {
+  display: flex; /* Permite alinear el contenido con Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+     
+  }
+
+
+.switch {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 2px solid rgb(134, 145, 169);
   display: flex;
-  justify-content: center;
-  margin: 0 10px;
+  
+  align-items: center; /* Centra el slider verticalmente */
+  border-radius: 35px;
+  cursor: pointer; /* Añade un cursor para mejorar la interacción */
 }
 
-.header nav ul {
-  display: flex;
-  gap: 10px; /*espaciado entre los li*/
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.slider {
+  position: absolute; /* Posicionamiento absoluto dentro del switch */
+  top: 50%; /* Centra verticalmente */
+  
+  transform: translateY(-50%); /* Ajuste fino para centrar exactamente */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(94, 156, 207);
+  transition: transform 0.3s ease; /* Animación suave */
+}
+input:checked + .slider {
+  transform: translate(16px, -50%); /* Desplaza hacia la derecha al activarse */
+}
+.checkbox{
+    display: none;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 2;
+    background: none;
+    border: none;
+    color: #ffffff;
 }
 
-.header nav ul li {
-  display: inline;
-  border-bottom: 2px solid var(--color-texto);
-  transition: .2s all linear;
-}
-
-.header nav ul li a {
-  text-decoration: none;
-  color: inherit;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.header nav ul li:hover {
-  color: var(--color-texto-contrario);
-  border-bottom: 2px solid var(--color-texto-contrario);
-}
-
-.dark-mode-button {
-  cursor: pointer;
-}
 
 #carouselExample {
   width: 100%;

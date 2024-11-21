@@ -1,3 +1,21 @@
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+
+
+// Alternar clase 'active' para mostrar/ocultar el menú al hacer clic en el botón hamburguesa
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation(); // Evita que el clic en el botón hamburguesa cierre el menú
+  navLinks.classList.toggle('active');
+});
+
+// Cerrar el menú si el usuario hace clic fuera de él
+document.addEventListener('click', (e) => {
+  if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+    navLinks.classList.remove('active');
+  }
+});
+
 const darkModeButton = document.querySelector(".dark-mode-button"); // la lunita basicamente
 const body = document.querySelector(".body");
 

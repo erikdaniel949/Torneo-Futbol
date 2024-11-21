@@ -1,6 +1,8 @@
+// Selección de elementos del DOM
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
-
+const searchIcon = document.querySelector('.search-icon');
+const searchBar = document.querySelector('.search-bar');
 
 
 // Alternar clase 'active' para mostrar/ocultar el menú al hacer clic en el botón hamburguesa
@@ -14,6 +16,22 @@ document.addEventListener('click', (e) => {
   if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
     navLinks.classList.remove('active');
   }
+});
+// Evento para el ícono de búsqueda
+searchIcon.addEventListener('click', () => {
+    searchBar.classList.toggle('active');
+    if (searchBar.classList.contains('active')) {
+        searchBar.focus();
+        // Si el menú está abierto, lo cerramos
+        navLinks.classList.remove('active');
+    }
+});
+
+// Cerrar el buscador si se hace clic fuera de él
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.search-container') && !e.target.closest('.search-icon')) {
+        searchBar.classList.remove('active');
+    }
 });
 
 const darkModeButton = document.querySelector(".dark-mode-button"); // la lunita basicamente

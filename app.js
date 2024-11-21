@@ -27,6 +27,65 @@ searchIcon.addEventListener('click', () => {
     }
 });
 
+//modo oscuro
+let checkbox = document.querySelector('.checkbox');
+let body = document.body;
+let boxes = document.querySelectorAll('.box'); // Selecciona todos los div con clase 'box'
+let footer = document.querySelector('.footer'); // Selecciona el footer
+
+// Verificar si el modo oscuro está activado en el localStorage
+if (localStorage.getItem('darkMode') === 'enabled') {
+  checkbox.checked = true;
+  body.style.backgroundColor = 'black';
+  body.style.color = 'white';
+
+  // Cambiar color de fondo y texto de los elementos .box
+  boxes.forEach(function(box) {
+    box.style.backgroundColor = 'gray';
+    box.style.color = 'red';
+  });
+
+  // Cambiar color de fondo y texto del footer
+  footer.style.backgroundColor = 'purple';
+  footer.style.color = 'white';
+}
+
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    body.style.backgroundColor = 'black';
+    body.style.color = 'white';
+
+    // Cambiar color de fondo y texto de los elementos .box
+    boxes.forEach(function(box) {
+      box.style.backgroundColor = 'gray';
+      box.style.color = 'red';
+    });
+
+    // Cambiar color de fondo y texto del footer
+    footer.style.backgroundColor = 'purple';
+    footer.style.color = 'white';
+
+    // Guardar el estado del modo oscuro en localStorage
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    body.style.backgroundColor = 'white';
+    body.style.color = 'black';
+
+    // Revertir el estilo de todos los elementos con la clase 'box'
+    boxes.forEach(function(box) {
+      box.style.backgroundColor = '';
+      box.style.color = '';
+    });
+
+    // Revertir el estilo del footer
+    footer.style.backgroundColor = '';
+    footer.style.color = '';
+
+    // Guardar el estado del modo claro en localStorage
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
+
 // Cerrar el buscador si se hace clic fuera de él
 document.addEventListener('click', (e) => {
     if (!e.target.closest('.search-container') && !e.target.closest('.search-icon')) {

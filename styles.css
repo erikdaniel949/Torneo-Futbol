@@ -326,7 +326,7 @@ input:checked + .slider {
   background-color: var(--color-secundario); /* Color de fondo del footer */
   padding: 20px;
   display: flex;
-  flex-direction: columns;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;

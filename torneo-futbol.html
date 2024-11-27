@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneo de Fútbol</title>
     <link rel="icon" href="imagenes/logo-eset-unq.ico">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -19,6 +19,7 @@
             <i class="fas fa-bars"></i>
         </button>
         <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Inicio</a>
             <a href="#"><i class="fas fa-gamepad"></i> Videojuegos</a>
             <a href="#"><i class="fas fa-book"></i> Literatura</a>
             <a href="#"><i class="fas fa-chess"></i> Ajedrez</a>
@@ -74,6 +75,17 @@
       <section class="section" id="clasificacion" data-aos="fade-down-right">
         <h2 class="section-title">Clasificación</h2>
         <div class="section-item">
+          <div class="tabla-puntos">
+            <div class="tabla-item">
+              <div class="tabla-item-campo campo-nombre"><p><b>Nombre</b></p></div>
+              <div class="tabla-item-campo campo-puntos"><p><b>Pts</b></p></div>
+            </div>
+          </div>
+        </div>
+        <div class="section-item section-item-img">
+          <img src="imagenes/IMG_1064.JPG" alt="Una foto genial">
+        </div>
+                <div class="section-item">
             <p>El torneo de fútbol de la escuela <strong>ESET UNQ</strong> se organiza en dos fases:</p>
             <ol>
               <li>
@@ -85,9 +97,6 @@
                 <p>Los ocho equipos clasificados compiten en rondas de eliminación directa: cuartos de final, semifinales y final. En esta etapa, el que pierde queda fuera. En caso de empate, se resuelve con tiempo extra o penales. El ganador de la final se consagra campeón del torneo.</p>
               </li>
             </ol>
-        </div>
-        <div class="section-item section-item-img">
-          <img src="imagenes/IMG_1064.JPG" alt="Una foto genial">
         </div>
       </section>
       <section class="section" id="historia" data-aos="fade-down-right">
@@ -110,7 +119,7 @@
         <a href="mailto:escuela.secundaria.tecnica@unq.edu.ar"><svg class="svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></a>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -119,4 +128,4 @@
       });
     </script>
   </body>
-</html>
+  </html>

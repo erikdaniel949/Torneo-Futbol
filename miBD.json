@@ -1,0 +1,34 @@
+{
+  "equipos": [
+    {
+      "id": 1,
+      "nombre": "Peruanos",
+      "puntos": 15
+    },
+    {
+      "id": 2,
+      "nombre": "Los mejores",
+      "puntos": 20
+    },
+    {
+      "id": 3,
+      "nombre": "Barrilete cósmico",
+      "puntos": 12
+    },
+    {
+      "id": 4,
+      "nombre": "La vagancia",
+      "puntos": 10
+    },
+    {
+      "id": 5,
+      "nombre": "Las girls",
+      "puntos": 8
+    },
+    {
+      "id": 6,
+      "nombre": "Indios kilmes",
+      "puntos": 18
+    }
+  ]
+}
